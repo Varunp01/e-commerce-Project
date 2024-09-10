@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/products"><i class="fa-solid fa-store"></i>E-Commerce</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav bg-light">
+        <a class="nav-link" href="/nav/electronics">Electronics</a>
+        <a class="nav-link" href="/nav/grooming">Grooming</a>
+        <a class="nav-link" href="/nav/food">Food</a>
+        <a class="nav-link" href="/products/new">ADD PRODUCT</a>
+      </div>
+      <div class="navbar-nav ms-auto bg-light">
+        <% if (!currUser) { %>
+          <a class="nav-link" href="/signup">SIGN_UP</a>
+          <a class="nav-link" href="/login">LoginIN</a>
+          <% } %>
+            <% if (currUser) { %>
+                  <a class="nav-link" href="/cart/cart/<%= currUser._id %>"><i
+                          class="fa-solid fa-cart-shopping"></i>Cart</a>
+                  <a class="nav-link" href="#"><i><u>
+                        <%= currUser.username %>
+                      </u></i></a>
+                  <a class="nav-link" href="/logout">LogOut</a>
+                  <% } %>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,25 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+    <body>
+        <h3>Cart of <%= currUser.username %></h3>
+        <h5>Total number of items: <%= cartLength %></h5>
+        <h6>Total : ₹&nbsp; <%= total %></h6>
+        <% for(const item of cartItems){ %>
+            <div class="cartContainer">
+                <!-- <p><%= item._id %></p> -->
+                <h1><%= item.title %></h1>
+                <div class="cartCard">
+                    <div class="cartCardImg">
+                        <img src="<%= item.image %>" alt="img" width="200px">
+                    </div>
+                    <div class="cartCardDetails">
+                        <h3>Category: <%= item.category %></h3>
+                        <h3>desc: <%= item.description %></h3>
+                        <h3>price: ₹&nbsp;<%= item.price %></h3>
+                    </div>
+                </div>
+                <h5><%= item.reviews %></h5>
+            </div>
+            <% } %>
+
+    </body>

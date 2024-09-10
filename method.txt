@@ -1,0 +1,35 @@
+npm i init -y
+npm i express
+npm i ejs
+npm i mongoose
+npm i method-override
+npm i ejs-mate
+npm i joi   //for mongoDB validation on server side
+npm i cookie-parser //to display cookie on browser
+npm i express-session   //to generate a session
+npm i connect-flash //to display any msg or alert only once
+
+//authentication middleware
+npm i passport  //for starting passport
+npm i passport-local  //for using manual login id email pass..
+npm i passport-local-mongoose  //for using mongoDB with passport
+
+//to upload files to bakend
+npm i multer
+
+//cloudinary - to upload images
+npm i cloudinary
+npm i multer-storage-cloudinary
+
+//to access .env variables
+npm i dotenv
+
+//mongo atlas
+//session change (express-session to mongo session)
+//npm i connect-mongo
+
+//deployment
+//insert engine and node version in package.json
+
+touch app.js
+

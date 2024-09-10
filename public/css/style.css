@@ -1,0 +1,88 @@
+.body-container{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    min-height: 80vh;
+}
+.navbar{
+    height: 10vh;
+}
+.container{
+    height: 80vh;
+    overflow-y: scroll;
+    width: 100%;
+
+}
+.footer{
+    height: 10vh;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 1021;
+}
+.card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    width: 100% !important;
+    object-fit: cover !important;
+    border-radius: 1rem !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+a{
+    text-decoration: none !important;
+    color: black !important;
+}
+a:hover{
+    text-decoration: none !important;
+    color: black !important;
+    font-weight: bolder;
+}
+.card:hover .card-img-top{
+    opacity: 0.5;
+}
+.card:hover{
+    font-size: larger !important;
+}
+.cartContainer{
+    background-color: rgb(246, 246, 246);
+    margin: 10px 5px 10px 5px;
+    padding: 10px 5px 10px 5px;
+    display: block;
+    h1{
+        margin: 10px 5px 10px 20px;
+        padding: 10px 20px 10px 20px;        
+    }
+}
+.cartCard{
+    margin: 10px 5px 10px 5px;
+    padding: 10px 5px 10px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    
+}
+/* @media only screen and (max-width: 600px) {
+    .cartCard {
+    }
+  } */
+.cartCardImg{
+    display: flex;
+    margin: 10px 5px 10px 20px;
+    padding: 10px 20px 10px 20px;
+    /* background-color: aqua; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.cartCardDetails{
+    background-color: rgb(229, 229, 229);
+    margin: 10px 5px 10px 20px;
+    /* flex-wrap: wrap; */
+    padding: 10px 20px 10px 20px;
+
+}

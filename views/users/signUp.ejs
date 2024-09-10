@@ -1,0 +1,14 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+<body>
+    <h1>signup</h1>
+    <form action="/signup" method="POST">
+        <input name="username" placeholder="username" type="text" required>
+        <br>
+        <input name="email" placeholder="email" type="email">
+        <br>
+        <input name="password" placeholder="password" type="password" required>
+        <br>
+         <button>Submit</button>
+    </form>
+</body>

@@ -1,0 +1,50 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<body>
+    <h3>Details</h3>
+    <ul>
+        <li>Owned by: <i><b><%= product.owner.username%></b></i></li>
+        <li><%= product.title %></li>
+        <li><%= product.description %></li>
+        <li> &#8377; <%= product.price %></li>
+        <li><%= product.category %></li>
+        <li><%= product.image %></li>
+    </ul>
+
+    <% if (currUser && currUser._id.equals(product.owner.id)) { %>
+    <a href="/products/<%= product.id %>/edit">Edit this shit</a>
+    <form action="/products/<%= product.id %>?_method=DELETE" method="post">
+        <button>Delete</button>
+    </form>
+    <form action="/cart/<%= product.id %>/cart/<%= currUser._id %>?_method=PUT" method="post">
+        <button>Add to Cart</button>
+    </form>
+    <% } %>
+
+    <hr>
+    <% if (currUser) { %>
+
+    <h1>Leave a review</h1>
+    <form action="/products/<%= product.id %>/review" method="post">
+        <label for="rating">Rating: 
+            <input type="range" min="1" max="5" name="review[rating]">
+        </label>
+        <br>
+        <label for="comment">Comment: 
+            <textarea name="review[comment]" id="comment" cols="30" rows="2" required></textarea>
+        </label>
+        <br>
+        <button>Submit</button>
+    </form>    
+    <hr>
+    <% } %>
+    <h4>All Reviews</h4>
+    <%for(review of product.reviews){%>
+        <ul>
+            <li><b><%= review.author.username %></b></li>
+            <li><%= review.comment %>, <%= review.rating %></li>
+            <form action="/products/<%= product.id %>/review/<%= review.id %>?_method=DELETE" method="POST">
+                <button class="btn btn-sm btn-dark">Delete</button>
+            </form>
+        </ul>
+    <%}%>
+</body>
