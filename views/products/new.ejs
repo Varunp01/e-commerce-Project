@@ -1,22 +1,24 @@
 <% layout("/layouts/boilerplate.ejs") %>
 
-<body>
-    <form action="/products" method="POST" enctype="multipart/form-data">   
-        <!-- enctype="multipart/form-data" for sending images as files to store -->
-        <input name="product[title]" placeholder="Enter Title" type="text" required>
-        <br>
-        <textarea name="product[description]" placeholder="Enter description" required></textarea>
-        <!-- <br> -->
-        <!-- <input name="product[image]" placeholder="Enter image URL" type="text"> -->
-        <br>
-        <input name="product[image]" placeholder="Upload image" type="file" required>
-        <br>
-        <input name="product[price]" placeholder="Enter price" type="number" required>
-        <br>
-         <input type="radio" id="grooming" name="product[category]" value="grooming" required>Grooming
-         <input type="radio" id="electronics" name="product[category]" value="electronics" required>electronics
-         <input type="radio" id="food" name="product[category]" value="food" required>Food
-         <br>
-         <button>Submit</button>
-    </form>
-</body>
+    <body>
+        <div class="new-form">
+            <form action="/products" method="POST" enctype="multipart/form-data">
+                <!-- enctype="multipart/form-data" for sending images as files to store -->
+                <input name="product[title]" placeholder="Enter Title" type="text" required>
+                <br>
+                <textarea name="product[description]" placeholder="Enter description" required></textarea>
+                <!-- <br> -->
+                <!-- <input name="product[image]" placeholder="Enter image URL" type="text"> -->
+                <br>
+                <input name="product[image]" placeholder="Upload image" type="file" required>
+                <br>
+                <input name="product[price]" placeholder="Enter price" type="number" required>
+                <br>
+                <input type="radio" id="grooming" name="product[category]" value="grooming" required>Grooming
+                <input type="radio" id="electronics" name="product[category]" value="electronics" required>electronics
+                <input type="radio" id="food" name="product[category]" value="food" required>Food
+                <br>
+                <button>Submit</button>
+            </form>
+        </div>
+    </body>
