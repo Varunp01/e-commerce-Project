@@ -4,15 +4,15 @@
         <div class="new-form">
             <form action="/products" method="POST" enctype="multipart/form-data">
                 <!-- enctype="multipart/form-data" for sending images as files to store -->
-                <input name="product[title]" placeholder="Enter Title" type="text" required>
+                <input name="product[title]" placeholder="Enter Title" type="text" class="marginBottom" required>
                 <br>
-                <textarea name="product[description]" placeholder="Enter description" required></textarea>
+                <textarea name="product[description]" placeholder="Enter description" class="marginBottom" required></textarea>
                 <!-- <br> -->
                 <!-- <input name="product[image]" placeholder="Enter image URL" type="text"> -->
                 <br>
-                <input name="product[image]" placeholder="Upload image" type="file" required>
+                <input name="product[image]" placeholder="Upload image" type="file" class="marginBottom" required>
                 <br>
-                <input name="product[price]" placeholder="Enter price" type="number" required>
+                <input name="product[price]" placeholder="Enter price" type="number" class="marginBottom" required>
                 <br>
                 <input type="radio" id="grooming" name="product[category]" value="grooming" required>Grooming
                 <input type="radio" id="electronics" name="product[category]" value="electronics" required>electronics
