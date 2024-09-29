@@ -89,6 +89,11 @@ a:hover{
 .new-form{
     height: 80vh;
     width: 80vw;
-    
-    background-color: aqua;
+    margin: auto auto auto auto;
+    /* background-color: aqua; */
+
+}
+
+.marginBottom{
+    margin-bottom: 20px;
 }
